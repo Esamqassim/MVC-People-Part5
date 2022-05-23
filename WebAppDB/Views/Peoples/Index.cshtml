@@ -1,0 +1,9 @@
+﻿@model IEnumerable<WebAppDB.Models.Person>
+@{
+    ViewData["Title"] = "People List";
+}
+
+
+<div class="people">
+    <partial name="_ViewPeople" model="@Model" />
+</div>

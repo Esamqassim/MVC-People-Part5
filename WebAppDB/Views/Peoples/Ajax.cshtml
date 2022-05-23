@@ -1,0 +1,26 @@
+﻿@model Person
+
+<button onclick="getPeople()">Get People List</button><br />
+
+
+
+
+<input type="number" id="inputId" name="find" value="">
+<button onclick="getPerson('@Url.Action("Details", "Peoples")', 'inputId')">
+    Details
+</button><br />
+
+<div>
+<input type="number" id="input" name="Id" value="">
+<button onclick="deletetPerson('@Url.Action("DeletePerson", "Peoples")', 'input')">
+    Delete
+</button>
+</div>
+
+<div id="PeopleList"> <!--Output-->
+    
+</div>
+<div id="PeopleList2">
+                          <!--Output-->
+
+</div>

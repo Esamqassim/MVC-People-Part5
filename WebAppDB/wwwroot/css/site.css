@@ -1,0 +1,156 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+/* Added new-----------------------------*/
+body {
+    background-color: aqua;
+}
+
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+#tab, #tab2 {
+    width: 100%;
+}
+
+
+.part1 {
+    display: flex;
+}
+
+.row-2, .thead {
+    display: flex;
+}
+
+.thead {
+    border-style: double;
+    font-weight: bold;
+    font-size: 20px;
+}
+    .thead > .col-1 {
+        width: 300px;
+        
+    }
+    .col-1, .col-2, .r2-right {
+        width: 250px;
+        margin: 10px;
+        text-align: center;
+        border-style: solid;
+        border-color: black;
+        
+    }
+
+.row-2 {
+    border-style: solid;
+    border-color: black;
+    background-color: azure;
+}
+
+.rowt2-1, .rowt2-2 {
+    display: flex;
+}
+
+.rowt2-1 {
+    border-style: double;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.rowt2-2 {
+    border-style: dashed;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.colt2-1, .colt2-2, .colt2-3, .colt2-4, .colt2-5 {
+    width: 150px;
+    margin: 10px;
+    text-align: center;
+    border-style: solid;
+    border-color: black;
+}
+
+.row-2 > .col-3 > a,.btn2 {
+    text-align: center;
+    border-style: solid;
+    background-color: greenyellow;
+    border-block-color: blue;
+    text-decoration: none;
+    
+    border: 2px solid red;
+    border-radius: 5px;
+    
+}
+
+
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy, .row-2 > .col-3 > a {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}

@@ -1,0 +1,65 @@
+﻿@model IEnumerable<WebAppDB.Models.Person>
+<!-- <form asp-action="Index" method="post">
+    <label for="find">Enter a name or city to search:</label><br>
+    <input type="text" id="find" name="find" value=""><br>
+    <input type="submit" value="Search">
+</form>
+
+-->
+<h1>People list </h1>
+<p>Wellcome to People list!</p>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<div class="thead">
+    <div class="col-1"> First Name</div>
+    <div class="col-2"> City</div>
+    <!-- <div class="col-3"> Show details </div>-->
+
+</div>
+
+
+@if (Model != null)
+{
+    @foreach (Person per in Model)//It needs to create instance in controller, Home controller
+    {
+
+        <div class="row-2">
+            <div class="r2-left">
+                <partial name="_ViewDBase" model="per" />
+            </div>
+            <!--
+            <div class="r2-right">
+                <a asp-action="Link" asp-route-id="put id">Details</a>
+            </div>
+            -->
+            <div class="col-3">
+                <!---
+                <a asp-action="Edit" asp-route-id="put id">Edit</a> |-->
+                <!---  <a asp-action="DetailsOne" asp-route-id="@per.Id">Details</a>-->
+                <!--|
+                <a asp-action="Delete" asp-route-id="put id">Delete</a>
+                -->
+
+                <form asp-action="DetailsOne" asp-route-id="@per.Id">
+                    <input type="hidden" asp-for="@per.Id" />
+                    <input type="submit" value="Details" class="btn2 " />
+
+                </form>
+
+            </div>
+        </div>
+
+    }
+}
+
+
+<div id="PeopleList">
+    @ViewBag.Inform
+</div>
+
+<!--To ------------------------------------test only-->
+
+

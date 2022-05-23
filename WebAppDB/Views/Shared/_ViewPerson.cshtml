@@ -1,0 +1,33 @@
+﻿ @model WebAppDB.Models.Person
+
+     <h1>Person Details </h1>
+
+<div class="table2">
+    <div class="rowt2-1">
+        <div class="colt2-1">Person FName</div>
+        <div class="colt2-2">Person LName</div>
+        <div class="colt2-3">City</div>
+        <div class="colt2-4">Mobile</div>
+        <div class="colt2-5">Person Id</div>
+    </div>
+
+    @if (Model != null)
+    {
+        <div class="rowt2-2">
+            <div class="colt2-1">@Model.FirstName</div>
+            <div class="colt2-2"> @Model.LastName</div>
+            <div class="colt2-3">@Model.CityName</div>
+            <div class="colt2-4">@Model.PhoneNumber</div>
+            <div class="colt2-5">@Model.Id</div>
+
+        </div>
+   
+    <!--
+    <div>
+        <a asp-action="Delete" asp-route-id="@Model.Id" asp-fragment="test">Delete person</a>
+    </div>
+        -->
+    }
+
+</div>
+

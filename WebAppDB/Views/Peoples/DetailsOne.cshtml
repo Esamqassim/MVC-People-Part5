@@ -1,0 +1,42 @@
+﻿    @model WebAppDB.Models.Person
+
+    @{
+    ViewBag.Title = "Home Link";
+    }
+
+<h1>Wellcome to Link information page </h1>
+
+<table id="tab">
+    <tr>
+
+        <th>Person FName</th>
+        <th>Person LName</th>
+        <th>City </th>
+        <th>Telfon no.</th>
+        <th>Person Id</th>
+    </tr>
+
+    <tr>
+        @if (Model != null)
+        {
+            <td> @Model.FirstName</td>
+        <td> @Model.LastName</td>
+        <td> @Model.CityName </td>
+        <td> @Model.PhoneNumber </td>
+        <td> @Model.Id </td>
+        }
+    </tr>
+
+
+</table>
+
+<div>
+    <!--
+    <a asp-action="DeleteOne" asp-route-id=" put id here" asp-fragment="test">Delete person</a>
+    -->
+    <form asp-action="DeleteOne">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
